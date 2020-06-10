@@ -1,0 +1,46 @@
+.container {
+  width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  .card {
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.8);
+    position: relative;
+    color: white;
+  }
+
+  .header {
+    position: absolute;
+    top: 7%;
+    right: 7%;
+    font-size: 20px;
+    i {
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    font-size: 80px;
+  }
+
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@for $i from 0 through 2 {
+  #non-printable-#{$i} {
+    visibility: hidden;
+  }
+
+  #printable-#{$i}:hover #non-printable-#{$i} {
+    visibility: visible;
+  }
+}
